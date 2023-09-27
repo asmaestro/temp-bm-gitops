@@ -46,7 +46,7 @@ spec:
           resources:
             requests:
               memory: 64Mi
-              cpu: 64m
+              cpu: 10m
             limits:
               memory: 2048Mi
               cpu: 256m
@@ -105,7 +105,7 @@ spec:
           resources:
             requests:
               memory: 64Mi
-              cpu: 64m
+              cpu: 10m
             limits:
               memory: 2048Mi
               cpu: 256m
@@ -173,7 +173,7 @@ spec:
           resources:
             requests:
               memory: 64Mi
-              cpu: 64m
+              cpu: 10m
             limits:
               memory: 2048Mi
               cpu: 256m
@@ -232,7 +232,7 @@ spec:
           resources:
             requests:
               memory: 64Mi
-              cpu: 64m
+              cpu: 10m
             limits:
               memory: 2048Mi
               cpu: 256m
@@ -279,7 +279,7 @@ spec:
           resources:
             requests:
               memory: 64Mi
-              cpu: 64m
+              cpu: 10m
             limits:
               memory: 2048Mi
               cpu: 256m
