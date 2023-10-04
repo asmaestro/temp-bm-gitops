@@ -5,7 +5,6 @@ resources:
 - ../../base
 - frontend.yaml
 - infrastructure.yaml
-- namespace.yaml
 
 generators:
 - "gh-secret-generator.yaml"
