@@ -2,12 +2,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- booking-deployment.yaml
+- booking-rollout.yaml
 - booking-service.yaml
-- flight-deployment.yaml
+- flight-rollout.yaml
 - flight-service.yaml
-- identity-deployment.yaml
+- identity-rollout.yaml
 - identity-service.yaml
-- passenger-deployment.yaml
+- passenger-rollout.yaml
 - passenger-service.yaml
 
