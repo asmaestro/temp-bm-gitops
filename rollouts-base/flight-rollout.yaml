@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: flight-deployment
+  name: flight
   labels:
     app.kubernetes.io/name: flight
     app.kubernetes.io/part-of: booking-microservices

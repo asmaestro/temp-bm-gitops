@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: identity-deployment
+  name: identity
   labels:
     app.kubernetes.io/name: identity
     app.kubernetes.io/part-of: booking-microservices
