@@ -1,6 +1,6 @@
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: booking-deployment
   labels:
@@ -32,3 +32,8 @@ spec:
             limits:
               memory: 512Mi
               cpu: 256m
+  strategy:
+    canary: 
+      steps:
+      - setWeight: 20
+      - pause: {}
