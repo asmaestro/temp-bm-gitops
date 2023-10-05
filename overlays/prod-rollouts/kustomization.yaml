@@ -5,6 +5,7 @@ namespace: prod
 
 resources:
 - ../../base
+- infrastructure.yaml
 - frontend-rollout.yaml
 - ingress.yaml
 
