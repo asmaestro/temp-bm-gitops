@@ -1,0 +1,34 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: booking-deployment
+  labels:
+    app.kubernetes.io/name: booking
+    app.kubernetes.io/part-of: booking-microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking
+  template:
+    metadata:
+      labels:
+        app: booking
+    spec:
+      containers:
+        # CHANGE TO YOURS:<org/repo:tag>
+        - image: ghcr.io/asmaestro/temp-bm-booking:latest
+          name: booking
+          ports:
+            - containerPort: 8080
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: docker                             
+          resources:
+            requests:
+              memory: 64Mi
+              cpu: 10m
+            limits:
+              memory: 512Mi
+              cpu: 256m
