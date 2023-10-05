@@ -24,4 +24,4 @@ patches:
 
 images:
 - name: alexmt/rollouts-demo
-  newTag: red
+  newTag: green
