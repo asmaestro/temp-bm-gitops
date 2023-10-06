@@ -39,10 +39,9 @@ spec:
           failureThreshold: 1
           periodSeconds: 10
   strategy:
-    # blueGreen:
-    #   activeService: rollouts-demo
-    #   previewService: rollouts-demo-preview
     canary: 
+      canaryService: frontend-canary
+      stableService: frontend-stable
       steps:
       - setWeight: 20
       - pause: {}
@@ -50,7 +49,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: frontend-stable
 spec:
   selector:
     app: frontend
@@ -60,3 +59,18 @@ spec:
     port: 80
     targetPort: 80
   type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-canary
+spec:
+  selector:
+    app: frontend
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP
+  
