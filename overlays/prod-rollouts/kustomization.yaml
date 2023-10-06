@@ -27,8 +27,8 @@ patches:
 
 images:
 - name: k8smaestro/argo-rollouts-demo
-  newTag: green
-  
+  newTag: blue
+
 # images:
 # - name: ghcr.io/asmaestro/temp-bm-booking
 #   newTag: 1.1.0
