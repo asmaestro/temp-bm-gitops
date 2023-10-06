@@ -38,11 +38,11 @@ patches:
 images:
 - name: k8smaestro/argo-rollouts-demo
   newTag: green
-- name: ghcr.io/asmaestro/course-bm-booking
+- name: ghcr.io/asmaestro/temp-bm-booking
   newTag: 1.1.0
-- name: ghcr.io/asmaestro/course-bm-flight
+- name: ghcr.io/asmaestro/temp-bm-flight
   newTag: 1.1.0
-- name: ghcr.io/asmaestro/course-bm-identity
+- name: ghcr.io/asmaestro/temp-bm-identity
   newTag: 1.1.0
-- name: ghcr.io/asmaestro/course-bm-passenger
+- name: ghcr.io/asmaestro/temp-bm-passenger
   newTag: 1.1.0
