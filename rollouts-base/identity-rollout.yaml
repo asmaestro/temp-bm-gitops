@@ -34,11 +34,11 @@ spec:
               cpu: 256m
   strategy:
     canary: 
-      canaryService: identity-canary
-      stableService: identity-stable
-      trafficRouting:
-        nginx:
-          stableIngress: booking-microservies
+      # canaryService: identity-canary
+      # stableService: identity-stable
+      # trafficRouting:
+      #   nginx:
+      #     stableIngress: booking-microservies
       steps:
       - setWeight: 20
       - pause: {}
