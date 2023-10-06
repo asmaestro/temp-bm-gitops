@@ -25,6 +25,10 @@ patches:
     kind: Rollout
     labelSelector: app.kubernetes.io/part-of=booking-microservices
 
+images:
+- name: k8smaestro/argo-rollouts-demo
+  newTag: green
+  
 # images:
 # - name: ghcr.io/asmaestro/temp-bm-booking
 #   newTag: 1.1.0
