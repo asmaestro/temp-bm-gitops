@@ -32,13 +32,13 @@ spec:
             limits:
               memory: 512Mi
               cpu: 256m
-  # strategy:
-  #   canary: 
+  strategy:
+    canary: 
+      steps:
+      - setWeight: 20
+      - pause: {}
       # canaryService: booking-canary
       # stableService: booking-stable
       # trafficRouting:
       #   nginx:
       #     stableIngress: booking-microservies
-      # steps:
-      # - setWeight: 20
-      # - pause: {}
