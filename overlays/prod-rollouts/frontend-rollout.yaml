@@ -42,6 +42,9 @@ spec:
     canary: 
       canaryService: frontend-canary
       stableService: frontend-stable
+      trafficRouting:
+        nginx:
+          stableIngress: booking-microservies
       steps:
       - setWeight: 20
       - pause: {}
