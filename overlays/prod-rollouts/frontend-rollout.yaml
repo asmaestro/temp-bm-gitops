@@ -38,16 +38,16 @@ spec:
             port: http
           failureThreshold: 1
           periodSeconds: 10
-  strategy:
+  # strategy:
     # canary: 
     #   canaryService: frontend-canary
     #   stableService: frontend-stable
     #   trafficRouting:
     #     nginx:
     #       stableIngress: booking-microservies
-      steps:
-      - setWeight: 20
-      - pause: {}
+      # steps:
+      # - setWeight: 20
+      # - pause: {}
 ---
 apiVersion: v1
 kind: Service
