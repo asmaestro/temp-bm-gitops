@@ -2,10 +2,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flight
+  name: flight-stable
 spec:
   selector:
-    app: flight-stable
+    app: flight
   ports:
   - name: http
     protocol: TCP
