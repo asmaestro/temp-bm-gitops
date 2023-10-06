@@ -34,6 +34,11 @@ spec:
               cpu: 256m
   strategy:
     canary: 
+      canaryService: booking-canary
+      stableService: booking-stable
+      trafficRouting:
+        nginx:
+          stableIngress: booking-microservies
       steps:
       - setWeight: 20
       - pause: {}
