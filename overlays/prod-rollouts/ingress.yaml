@@ -14,6 +14,24 @@ spec:
   #     - twojadomena.pl # rememeber to change it to yours
   #   secretName: twojadomena-tls # rememeber to change it to yours
   rules:
+    - host: preview.w-kontenerach.pl # rememeber to change it to yours
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-preview
+                port:
+                  number: 80
+          - path: /(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: frontend-preview
+                port:
+                  number: 80
+                  
     - host: w-kontenerach.pl # rememeber to change it to yours
       http:
         paths:
