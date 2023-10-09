@@ -31,39 +31,19 @@ spec:
                 name: frontend-preview
                 port:
                   number: 80
-        
-        # HERE other microservices with `preview` suffix.
-
-    - host: w-kontenerach.pl # rememeber to change it to yours
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: frontend-stable
-                port:
-                  number: 80
-          - path: /(.*)
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: frontend-stable
-                port:
-                  number: 80
 
           - path: /identity
             pathType: Prefix
             backend:
               service:
-                name: identity-stable
+                name: identity-preview
                 port:
                   number: 80
           - path: /identity/(.*)
             pathType: ImplementationSpecific
             backend:
               service:
-                name: identity-stable
+                name: identity-preview
                 port:
                   number: 80
 
@@ -71,14 +51,14 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: flight-stable
+                name: flight-preview
                 port:
                   number: 80
           - path: /flight/(.*)
             pathType: ImplementationSpecific
             backend:
               service:
-                name: flight-stable
+                name: flight-preview
                 port:
                   number: 80
 
@@ -86,14 +66,14 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: passenger-stable
+                name: passenger-preview
                 port:
                   number: 80                  
           - path: /passenger/(.*)
             pathType: ImplementationSpecific
             backend:
               service:
-                name: passenger-stable
+                name: passenger-preview
                 port:
                   number: 80
 
@@ -101,13 +81,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: booking-stable
+                name: booking-preview
                 port:
                   number: 80                    
           - path: /booking/(.*)
             pathType: ImplementationSpecific
             backend:
               service:
-                name: booking-stable
+                name: booking-preview
                 port:
                   number: 80
